@@ -59,20 +59,19 @@ function draw() {
 	pop();
 
 	//border of the album cover
+	push();
+	translate(width/2, height/2);
 	noFill();
 	stroke(255);
-	strokeWeight(5);
+	strokeWeight(2);
 	rectMode(CENTER)
-	rect(width/2,height/2,rectSize, rectSize);
+	rect(0,0,rectSize, rectSize);
 
 	//random noise as background
-
-	push();
-	translate(60,60);
 	stroke(255);
 	strokeWeight(1);
 	for(let i=0; i<ptNum; i++){
-		point(random(rectSize), random(rectSize));
+		point(random(-rectSize/2,rectSize/2), random(-rectSize/2,rectSize/2));
 	};
 	pop();
 }
